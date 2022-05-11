@@ -11,5 +11,5 @@ $ npm run start:dev
 
 ## Update proto
 ```
-$ npm run proto:install && npm run proto:product
+$ npm run proto:install && npm run proto:journals
 ```

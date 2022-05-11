@@ -3,7 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { AppModule } from './app.module';
-import { protobufPackage } from './product/product.pb';
+import { protobufPackage } from './journal/journals.pb';
 
 async function bootstrap() {
   const app: INestMicroservice = await NestFactory.createMicroservice(
@@ -13,7 +13,7 @@ async function bootstrap() {
       options: {
         url: '0.0.0.0:50053',
         package: protobufPackage,
-        protoPath: join('node_modules/grpc-nest-proto/proto/product.proto'),
+        protoPath: join('node_modules/grpc-nest-proto/proto/journals.proto'),
       },
     },
   );
